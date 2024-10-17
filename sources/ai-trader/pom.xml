@@ -15,7 +15,14 @@
 		<module>ai-technicals</module>
 		<module>ai-trader-core</module>
 		<module>ai-trader-ui</module>
-		<module>ai-reports</module>
+<!--		<module>ai-reports</module>-->
 	</modules>
+	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.30</version>
+		</dependency>
+	</dependencies>
 
 </project>

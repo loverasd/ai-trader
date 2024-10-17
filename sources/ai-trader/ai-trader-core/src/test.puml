@@ -1,0 +1,31 @@
+@startuml
+
+' 定义样式
+skinparam rectangle {
+    BackgroundColor<<database>> Wheat
+    BackgroundColor<<rectangle>> LightBlue
+    BorderColor Black
+}
+
+skinparam actor {
+    BorderColor Black
+    BackgroundColor SkyBlue
+}
+
+' 定义参与者和组件
+actor 用户 as user
+rectangle "用户界面" as UI #RoyalBlue
+rectangle "查询处理器" as QueryProcessor #RoyalBlue
+database "向量数据库\n(Elasticsearch)" as VectorDB #Wheat
+database "数据库管理系统" as DBMS #Wheat
+rectangle "API钩子\n数据监听器" as APIHooks #RoyalBlue
+
+' 连接线
+user -down-> UI : 发起查询
+UI -right-> QueryProcessor : 提交查询
+QueryProcessor -down-> VectorDB : 处理查询向量
+VectorDB -down-> DBMS : 返回匹配项
+DBMS -down-> APIHooks : 数据变更监听
+APIHooks -up-> QueryProcessor : 触发更新
+
+@enduml

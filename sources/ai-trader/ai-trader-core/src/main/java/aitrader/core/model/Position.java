@@ -38,6 +38,7 @@ public class Position
 		return isOpen;
 	}
 
+
 	public void setOpen(boolean isOpen)
 	{
 		this.isOpen = isOpen;

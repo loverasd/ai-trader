@@ -7,7 +7,7 @@ import technicals.model.indicators.BollingerEntry;
 import technicals.model.indicators.IndicatorEntry;
 
 /**
- * Bollinger bands
+ * Bollinger bands 布林线
  */
 public class Bollinger
 {

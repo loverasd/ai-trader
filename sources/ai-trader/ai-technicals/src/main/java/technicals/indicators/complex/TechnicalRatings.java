@@ -1,34 +1,19 @@
 package technicals.indicators.complex;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Arrays;
-
 import technicals.indicators.ma.ExponentialMovingAverage;
 import technicals.indicators.ma.HullMovingAverage;
 import technicals.indicators.ma.SimpleMovingAverage;
 import technicals.indicators.ma.VWMovingAverage;
 import technicals.indicators.misc.Ichimoku;
-import technicals.indicators.oscillator.AverageDirectionalIndex;
-import technicals.indicators.oscillator.AwesomeOscillator;
-import technicals.indicators.oscillator.BullBearPower;
-import technicals.indicators.oscillator.CommodityChannelIndex;
-import technicals.indicators.oscillator.MACD;
-import technicals.indicators.oscillator.Momentum;
-import technicals.indicators.oscillator.RelativeStrengthIndex;
-import technicals.indicators.oscillator.Stochastic;
-import technicals.indicators.oscillator.StochasticRSI;
-import technicals.indicators.oscillator.UltimateOscillator;
-import technicals.indicators.oscillator.WilliamsR;
+import technicals.indicators.oscillator.*;
 import technicals.model.TechCandle;
 import technicals.model.indicators.IchimokuEntry;
 import technicals.model.indicators.IndicatorEntry;
-import technicals.model.oscillator.AdxEntry;
-import technicals.model.oscillator.MACDEntry;
-import technicals.model.oscillator.RsiEntry;
-import technicals.model.oscillator.StochRsiEntry;
-import technicals.model.oscillator.StochasticEntry;
-import technicals.model.oscillator.WilliamsREntry;
+import technicals.model.oscillator.*;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Arrays;
 
 public class TechnicalRatings
 {
@@ -70,7 +55,7 @@ public class TechnicalRatings
 
 	private double maRatingSum = 0;
 	private double maRatingCount = 0;
-	private RatingStatus maRatingStatus; 
+	private RatingStatus maRatingStatus;
 	private int trend;
 
 	private double rsi;
@@ -98,7 +83,7 @@ public class TechnicalRatings
 
 	private double oscRatingSum = 0;
 	private double oscRatingCount = 0;
-	private RatingStatus oscRatingStatus; 
+	private RatingStatus oscRatingStatus;
 
 	// ---- CONSTRUCTOR ----------------------------------------------------------------
 
