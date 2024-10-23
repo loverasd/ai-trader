@@ -6,16 +6,21 @@ import java.nio.file.Paths;
 
 import aitrader.util.Properties;
 
-public class TelegramConfig
-{
-	private static String apiToken;
-	private static String chatId;
+public class TelegramConfig
+
+{
+
+	private static String apiToken;
+
+	private static String chatId;
+
 
 	public static boolean isLoaded()
 	{
 		return apiToken != null && !apiToken.isEmpty() && chatId != null && !chatId.isEmpty();
 	}
-	
+	
+
 	public static String getApiToken()
 	{
 		return apiToken;
@@ -38,7 +43,7 @@ public class TelegramConfig
 
 	public static boolean load() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.TELEGRAM_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.TELEGRAM_FILENAME);
 		if (!path.toFile().exists())
 		{
 			CoreLog.error("File " + CoreConstants.TELEGRAM_FILENAME + " does not exist");
@@ -54,7 +59,7 @@ public class TelegramConfig
 
 	public static void save() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.TELEGRAM_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.TELEGRAM_FILENAME);
 		Properties.create(true)
 			.put("telegramApiToken", apiToken)
 			.put("telegramChatId", chatId)

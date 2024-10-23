@@ -357,7 +357,7 @@ public class CoreConfig
 
 	public static boolean load() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.PROPERTIES_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.PROPERTIES_FILENAME);
 		if (!path.toFile().exists())
 		{
 			CoreLog.error("File " + CoreConstants.PROPERTIES_FILENAME + " does not exist");
@@ -401,7 +401,7 @@ public class CoreConfig
 
 	public static void save() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.PROPERTIES_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.PROPERTIES_FILENAME);
 		Properties.create(false)
 			.put("defaultSymbolRight", defaultSymbolRight)
 			.put("whiteList", whiteList)

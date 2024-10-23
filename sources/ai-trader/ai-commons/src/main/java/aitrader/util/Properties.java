@@ -88,8 +88,9 @@ public final class Properties
 	public Properties load(Path path) throws IOException
 	{
 		String content = Files.readString(path);
+		///TODO 暂时移除加密
 
-		content = obfuscate ? Cipher.decrypt(content) : content;
+//		content = obfuscate ? Cipher.decrypt(content) : content;
 
 		Stream<String> lines = content.lines();
 		

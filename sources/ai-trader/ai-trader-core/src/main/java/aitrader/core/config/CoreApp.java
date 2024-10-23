@@ -75,6 +75,7 @@ public final class CoreApp
 		}
 		catch (Exception e)
 		{
+			e.printStackTrace();
 			System.err.println(ExceptionUtils.getMessage(e));
 			System.exit(-1);
 		}

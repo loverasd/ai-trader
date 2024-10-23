@@ -1,12 +1,16 @@
 package aitrader.core.config;
-
+
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import aitrader.util.Properties;
-
-public class PrivateConfig
+import aitrader.util.Properties;
+
+
+
+public class PrivateConfig
+
 {
 	private static String apiKey;
 	private static String secretKey;
@@ -38,14 +42,15 @@ public class PrivateConfig
 
 	public static boolean load() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.PRIVATEKEY_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.PRIVATEKEY_FILENAME);
+		System.out.println("日志："+CoreConstants.DEFAULT_USER_FOLDER_SSH);
 		if (!path.toFile().exists())
 		{
 			CoreLog.error("File " + CoreConstants.PRIVATEKEY_FILENAME + " does not exist");
 			return false;
 		}
 
-		Properties props = Properties.create(true).load(path);
+		Properties props = Properties.create(false).load(path);
 		apiKey = props.getValue("apiKey");
 		secretKey = props.getValue("secretKey");
 
@@ -54,11 +59,14 @@ public class PrivateConfig
 
 	public static void save() throws IOException
 	{
-		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER, CoreConstants.PRIVATEKEY_FILENAME);
+		Path path = Paths.get(CoreConstants.DEFAULT_USER_FOLDER_SSH, CoreConstants.PRIVATEKEY_FILENAME);
 		Properties.create(true)
 			.put("apiKey", apiKey)
 			.put("secretKey", secretKey)
 			.save(path);
-	}	
-	
-}
+	}	
+
+	
+
+}
+

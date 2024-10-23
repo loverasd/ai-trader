@@ -51,7 +51,7 @@ public class SignedClient
 
 	public List<AccountBalance> getBalance() throws Exception
 	{
-		final String path = "/fapi/v1/balance";
+		final String path = "/fapi/v2/balance";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
