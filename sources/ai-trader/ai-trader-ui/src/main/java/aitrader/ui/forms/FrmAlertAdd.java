@@ -115,7 +115,7 @@ public class FrmAlertAdd extends JFrame
 		setTitle(TITLE);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 350, 390);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmAlertAdd.class.getResource("/resources/bell.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmAlertAdd.class.getResource("/bell.png")));
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
 		

@@ -14,21 +14,21 @@ import com.formdev.flatlaf.extras.FlatSVGIcon;
 
 public final class Styles
 {
-	public static ImageIcon IMAGE_SEARCH = new FlatSVGIcon(Styles.class.getResource("/resources/search.svg"));
-	public static ImageIcon IMAGE_REFRESH = new FlatSVGIcon(Styles.class.getResource("/resources/refresh.svg"));
-	public static ImageIcon IMAGE_EXECUTE = new FlatSVGIcon(Styles.class.getResource("/resources/execute.svg"));
-	public static ImageIcon IMAGE_EXECUTE_LIGHT = new FlatSVGIcon(Styles.class.getResource("/resources/executeLight.svg"));
-	public static ImageIcon IMAGE_MOON = new FlatSVGIcon(Styles.class.getResource("/resources/moon.svg"));
-	public static ImageIcon IMAGE_SUN = new FlatSVGIcon(Styles.class.getResource("/resources/sun.svg"));
-	public static ImageIcon IMAGE_COPY = new FlatSVGIcon(Styles.class.getResource("/resources/copy.svg"));
-	public static ImageIcon IMAGE_WRENCH = new FlatSVGIcon(Styles.class.getResource("/resources/wrench.svg"));
-	public static ImageIcon IMAGE_BUG = new FlatSVGIcon(Styles.class.getResource("/resources/bug.svg"));
-	public static ImageIcon IMAGE_BELL = new FlatSVGIcon(Styles.class.getResource("/resources/bell-s.svg"));
-	public static ImageIcon IMAGE_REDO = new FlatSVGIcon(Styles.class.getResource("/resources/redo.svg"));
-	public static ImageIcon IMAGE_EXPAND = new FlatSVGIcon(Styles.class.getResource("/resources/expand-alt.svg"));
-	public static ImageIcon IMAGE_KEY = new FlatSVGIcon(Styles.class.getResource("/resources/key.svg"));
-	public static ImageIcon IMAGE_FLASK = new FlatSVGIcon(Styles.class.getResource("/resources/flask.svg"));
-	public static ImageIcon IMAGE_CHART = new FlatSVGIcon(Styles.class.getResource("/resources/chart.svg"));
+	public static ImageIcon IMAGE_SEARCH = new FlatSVGIcon(Styles.class.getResource("/search.svg"));
+	public static ImageIcon IMAGE_REFRESH = new FlatSVGIcon(Styles.class.getResource("/refresh.svg"));
+	public static ImageIcon IMAGE_EXECUTE = new FlatSVGIcon(Styles.class.getResource("/execute.svg"));
+	public static ImageIcon IMAGE_EXECUTE_LIGHT = new FlatSVGIcon(Styles.class.getResource("/executeLight.svg"));
+	public static ImageIcon IMAGE_MOON = new FlatSVGIcon(Styles.class.getResource("/moon.svg"));
+	public static ImageIcon IMAGE_SUN = new FlatSVGIcon(Styles.class.getResource("/sun.svg"));
+	public static ImageIcon IMAGE_COPY = new FlatSVGIcon(Styles.class.getResource("/copy.svg"));
+	public static ImageIcon IMAGE_WRENCH = new FlatSVGIcon(Styles.class.getResource("/wrench.svg"));
+	public static ImageIcon IMAGE_BUG = new FlatSVGIcon(Styles.class.getResource("/bug.svg"));
+	public static ImageIcon IMAGE_BELL = new FlatSVGIcon(Styles.class.getResource("/bell-s.svg"));
+	public static ImageIcon IMAGE_REDO = new FlatSVGIcon(Styles.class.getResource("/redo.svg"));
+	public static ImageIcon IMAGE_EXPAND = new FlatSVGIcon(Styles.class.getResource("/expand-alt.svg"));
+	public static ImageIcon IMAGE_KEY = new FlatSVGIcon(Styles.class.getResource("/key.svg"));
+	public static ImageIcon IMAGE_FLASK = new FlatSVGIcon(Styles.class.getResource("/flask.svg"));
+	public static ImageIcon IMAGE_CHART = new FlatSVGIcon(Styles.class.getResource("/chart.svg"));
 
 	public static Color COLOR_BORDER_LINE;
 	public static Color COLOR_LINK;
@@ -117,7 +117,7 @@ public final class Styles
 
 		// --------------------------------------------------------------------
 		//UIManager.setLookAndFeel(new FlatCarbonIJTheme());
-		IntelliJTheme.setup(Styles.class.getResourceAsStream("/resources/theme.json"));
+		IntelliJTheme.setup(Styles.class.getResourceAsStream("/theme.json"));
 		// --------------------------------------------------------------------
 
 		UIManager.put( "Component.focusWidth", 0.5 );

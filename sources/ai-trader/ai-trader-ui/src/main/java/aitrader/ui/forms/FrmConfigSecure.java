@@ -71,7 +71,7 @@ public class FrmConfigSecure extends JFrame
 		setTitle(UIConstants.APP_NAME + " - Secure");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 480, 300);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmConfigSecure.class.getResource("/resources/key.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmConfigSecure.class.getResource("/key.png")));
 		setLocationRelativeTo(null);
 
 		contentPane = new JPanel();

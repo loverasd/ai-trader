@@ -141,7 +141,7 @@ public class FrmCoinTech extends JFrame
 		setTitle(TITLE);
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmCoin.class.getResource("/resources/monitor.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmCoin.class.getResource("/monitor.png")));
 		setBounds(100, 100, 800, 600);
 		setLocationRelativeTo(null);
 

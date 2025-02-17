@@ -134,7 +134,7 @@ public class FrmPost extends JFrame
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 640, 570);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmPost.class.getResource("/resources/upDown.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmPost.class.getResource("/upDown.png")));
 		setLocationRelativeTo(null);
 		setResizable(false);
 

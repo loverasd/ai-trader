@@ -9,6 +9,7 @@ import aitrader.core.model.enums.PriceIncrType;
 import aitrader.core.model.enums.QtyIncrType;
 import aitrader.core.model.enums.QuantityType;
 import aitrader.util.Properties;
+import org.apache.commons.lang3.StringUtils;
 import technicals.indicators.depth.DephMergedPoints.MergeMode;
 
 public class CoreConfig
@@ -70,7 +71,9 @@ public class CoreConfig
 
 	public static void setWhiteList(String whiteList)
 	{
-		CoreConfig.whiteList = whiteList;
+		if (!StringUtils.isEmpty(whiteList)) {
+			CoreConfig.whiteList = whiteList;
+		}
 	}
 
 	public static String getBlackList()
@@ -80,7 +83,9 @@ public class CoreConfig
 
 	public static void setBlackList(String blackList)
 	{
-		CoreConfig.blackList = blackList;
+		if (!StringUtils.isEmpty(whiteList)) {
+			CoreConfig.blackList = blackList;
+		}
 	}
 
 	public static Long getMinVolume24h()

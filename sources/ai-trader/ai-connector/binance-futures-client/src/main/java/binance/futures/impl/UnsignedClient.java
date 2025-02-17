@@ -148,7 +148,7 @@ public class UnsignedClient
 
 	public static List<FundingRate> getFundingRate(String symbol, Integer limit) throws Exception
 	{
-		final String path = "/fapi/v1/fundingRate";
+		final String path = "/fapi/v2/fundingRate";
 
 		WebTarget target = ClientBuilder.newClient()
 			.target(ApiConstants.BASE_URL)
@@ -181,7 +181,7 @@ public class UnsignedClient
 
 	public static List<PremiumIndex> getPremiumIndex(String symbol) throws Exception
 	{
-		final String path = "/fapi/v1/premiumIndex";
+		final String path = "/fapi/v2/premiumIndex";
 
 		WebTarget target = ClientBuilder.newClient()
 			.target(ApiConstants.BASE_URL)

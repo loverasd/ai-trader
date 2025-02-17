@@ -168,7 +168,7 @@ public class FrmGrid extends JFrame
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 1152, 640);
 		setTitle(TITLE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmGrid.class.getResource("/resources/upDown.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmGrid.class.getResource("/upDown.png")));
 		setLocationRelativeTo(null);
 
 		contentPane = new JPanel();

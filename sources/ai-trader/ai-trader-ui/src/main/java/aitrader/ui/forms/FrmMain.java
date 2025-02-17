@@ -149,7 +149,7 @@ public class FrmMain extends JFrame
 	private void initComponents()
 	{
 		setTitle(UIConstants.APP_NAME + " - " + "unknown");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmMain.class.getResource("/resources/logo.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmMain.class.getResource("/logo.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 940, 593);
 		setLocationRelativeTo(null);

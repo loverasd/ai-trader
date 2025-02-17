@@ -97,7 +97,7 @@ public class FrmConfig extends JFrame
 	private void initComponents()
 	{
 		setTitle(UIConstants.APP_NAME + " - Config");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmConfig.class.getResource("/resources/wrench.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmConfig.class.getResource("/wrench.png")));
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 630, 410);
 		setLocationRelativeTo(null);

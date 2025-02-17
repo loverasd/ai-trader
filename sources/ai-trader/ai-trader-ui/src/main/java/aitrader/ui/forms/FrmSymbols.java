@@ -73,7 +73,7 @@ public class FrmSymbols extends JFrame
 		setBounds(100, 100, 760, 500);
 		setMinimumSize(new Dimension(760, 400));
 		setTitle(TITLE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmSymbols.class.getResource("/resources/monitor.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmSymbols.class.getResource("/monitor.png")));
 		setLocationRelativeTo(null);
 
 		pnlTopBar = new JPanel();

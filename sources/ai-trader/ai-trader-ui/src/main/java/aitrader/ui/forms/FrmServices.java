@@ -44,7 +44,7 @@ public class FrmServices extends JFrame
 		setTitle(UIConstants.APP_NAME + " - Restart");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 320, 280);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmServices.class.getResource("/resources/wrench.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmServices.class.getResource("/wrench.png")));
 		setLocationRelativeTo(null);
 
 		contentPane = new JPanel();

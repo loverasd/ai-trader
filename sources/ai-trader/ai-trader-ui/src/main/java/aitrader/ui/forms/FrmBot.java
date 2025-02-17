@@ -85,7 +85,7 @@ public class FrmBot extends JFrame
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 800, 500);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmBot.class.getResource("/resources/bot.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmBot.class.getResource("/bot.png")));
 		setLocationRelativeTo(null);
 		setResizable(false);
 

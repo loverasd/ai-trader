@@ -64,7 +64,7 @@ public class UnsignedClient {
 
     // 获取 Kline 数据的方法，异步返回 Kline 列表
     public static CompletableFuture<List<Candle>> getKlines(String symbol, IntervalType interval, int limit) {
-        URI uri = buildUri("/fapi/v1/klines", "symbol", symbol, "interval", interval.getCode(), "limit", String.valueOf(limit));
+        URI uri = buildUri("/fapi/v2/klines", "symbol", symbol, "interval", interval.getCode(), "limit", String.valueOf(limit));
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
@@ -97,7 +97,7 @@ public class UnsignedClient {
 
     // 获取交易所信息的方法，异步返回 ExchangeInfo 对象
     public static CompletableFuture<ExchangeInfo> getExchangeInformation() {
-        URI uri = buildUri("/fapi/v1/exchangeInfo");
+        URI uri = buildUri("/fapi/v2/exchangeInfo");
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
@@ -116,7 +116,7 @@ public class UnsignedClient {
 
     // 获取所有交易对的24小时价格变化数据的方法，异步返回 SymbolTicker 列表
     public static CompletableFuture<List<SymbolTicker>> getSymbolTickers() {
-        URI uri = buildUri("/fapi/v1/ticker/24hr");
+        URI uri = buildUri("/fapi/v2/ticker/24hr");
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
@@ -134,7 +134,7 @@ public class UnsignedClient {
     }
 
     public static CompletableFuture<List<FundingRate>> getFundingRate(String symbol, Integer limit) {
-        URI uri = buildUri("/fapi/v1/fundingRate", "symbol", symbol, "limit", String.valueOf(limit));
+        URI uri = buildUri("/fapi/v2/fundingRate", "symbol", symbol, "limit", String.valueOf(limit));
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
@@ -152,7 +152,7 @@ public class UnsignedClient {
     }
 
     public static CompletableFuture<List<PremiumIndex>> getPremiumIndex(String symbol) {
-        URI uri = buildUri("/fapi/v1/premiumIndex", "symbol", symbol);
+        URI uri = buildUri("/fapi/v2/premiumIndex", "symbol", symbol);
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)
@@ -174,7 +174,7 @@ public class UnsignedClient {
     }
 
     public static CompletableFuture<Depth> getDepth(String symbol, int limit) {
-        URI uri = buildUri("/fapi/v1/depth", "symbol", symbol, "limit", String.valueOf(limit));
+        URI uri = buildUri("/fapi/v2/depth", "symbol", symbol, "limit", String.valueOf(limit));
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(uri)

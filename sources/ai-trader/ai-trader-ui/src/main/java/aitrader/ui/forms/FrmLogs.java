@@ -78,7 +78,7 @@ public class FrmLogs extends JFrame
 		setBounds(100, 100, 760, 500);
 		setMinimumSize(new Dimension(760, 400));
 		setTitle(TITLE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmLogs.class.getResource("/resources/bug.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmLogs.class.getResource("/bug.png")));
 		setLocationRelativeTo(null);
 
 		pnlTopBar = new JPanel();

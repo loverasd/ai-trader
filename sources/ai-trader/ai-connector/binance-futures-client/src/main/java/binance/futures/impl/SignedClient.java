@@ -89,7 +89,7 @@ public class SignedClient
 	
 	public List<PositionRisk> getPositionRisk() throws Exception
 	{
-		final String path = "/fapi/v1/positionRisk";
+		final String path = "/fapi/v2/positionRisk";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
@@ -203,7 +203,7 @@ public class SignedClient
 
 	public String setLeverage(String symbol, int leverage) throws Exception
 	{
-		final String path = "/fapi/v1/leverage";
+		final String path = "/fapi/v2/leverage";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
@@ -241,7 +241,7 @@ public class SignedClient
 						   String quantity, String price, Boolean reduceOnly, String newClientOrderId, String stopPrice,
 						   WorkingType workingType, NewOrderRespType newOrderRespType, Boolean closePosition) throws Exception
 	{
-		final String path = "/fapi/v1/order";
+		final String path = "/fapi/v2/order";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
@@ -296,7 +296,7 @@ public class SignedClient
 	
 	public Order cancelOrder(String symbol, Long orderId, String origClientOrderId) throws Exception
 	{
-		final String path = "/fapi/v1/order";
+		final String path = "/fapi/v2/order";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
@@ -381,7 +381,7 @@ public class SignedClient
 	
 	public String keepUserDataStream() throws Exception 
 	{
-		final String path = "/fapi/v1/listenKey";
+		final String path = "/fapi/v2/listenKey";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());
@@ -415,7 +415,7 @@ public class SignedClient
 
 	public String closeUserDataStream() throws Exception 
 	{
-		final String path = "/fapi/v1/listenKey";
+		final String path = "/fapi/v2/listenKey";
 
 		String recvWindow = Long.toString(60_000L);
 		String timestamp = Long.toString(System.currentTimeMillis());

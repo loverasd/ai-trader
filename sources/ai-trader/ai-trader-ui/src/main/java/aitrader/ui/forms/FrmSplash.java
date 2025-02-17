@@ -1,10 +1,8 @@
 package aitrader.ui.forms;
 
-import java.awt.Color;
-import java.awt.EventQueue;
-import java.awt.Font;
-import java.awt.Toolkit;
+import java.awt.*;
 import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -28,7 +26,28 @@ public class FrmSplash extends JFrame
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 380, 240);
 		setUndecorated(true);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmSplash.class.getResource("/resources/logo.png")));
+
+		// 尝试使用根路径
+		URL resourceUrl = FrmSplash.class.getResource("/logo.png");
+
+		if (resourceUrl == null) {
+			// 尝试使用相对路径
+			resourceUrl = FrmSplash.class.getResource("logo.png");
+		}
+
+		if (resourceUrl == null) {
+			// 使用 ClassLoader
+			resourceUrl = FrmSplash.class.getClassLoader().getResource("logo.png");
+		}
+
+		if (resourceUrl != null) {
+			Image image = Toolkit.getDefaultToolkit().getImage(resourceUrl);
+			setIconImage(image);
+		} else {
+			System.out.println("Logo image not found.");
+		}
+
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmSplash.class.getResource("/logo.png")));
 		setLocationRelativeTo(null);
 
 		contentPane = new JPanel();
@@ -38,7 +57,7 @@ public class FrmSplash extends JFrame
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		lblLogo = new JLabel(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/resources/aitrader.png"))));
+		lblLogo = new JLabel(new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/aitrader.png"))));
 		lblLogo.setBounds(60, 72, 260, 80);
 		lblLogo.setForeground(new Color(89, 221, 255));
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);

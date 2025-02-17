@@ -95,7 +95,7 @@ public final class CoreApp
 				SymbolTickerService.openWebsocket();
 				TechnicalService.start();
 
-				DepthCache.start();
+//				DepthCache.start();
 
 				SignalService.start();
 				AlertService.start();

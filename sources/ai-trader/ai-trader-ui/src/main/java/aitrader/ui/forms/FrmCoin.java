@@ -192,7 +192,7 @@ public class FrmCoin extends JFrame
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 842, 700);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmCoin.class.getResource("/resources/monitor.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmCoin.class.getResource("/monitor.png")));
 		setLocationRelativeTo(null);
 
 		contentPane = new JPanel();

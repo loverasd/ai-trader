@@ -77,7 +77,7 @@ public class FrmAlerts extends JFrame
 		setBounds(100, 100, 760, 500);
 		setMinimumSize(new Dimension(760, 400));
 		setTitle(TITLE);
-		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmAlerts.class.getResource("/resources/bell.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(FrmAlerts.class.getResource("/bell.png")));
 		setLocationRelativeTo(null);
 
 		pnlTopBar = new JPanel();
