@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
 @Configuration
-@PropertySource(value = "file:/Users/chenpan/.ssh/bian_private.cfg", ignoreResourceNotFound = false)
+@PropertySource(value = "file:/Users/chenpan/.env/private.cfg", ignoreResourceNotFound = false)
 public class BinanceConfiguration {
     
     @Bean

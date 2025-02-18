@@ -32,7 +32,9 @@ dependencies {
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
-
+	// Redis support (Jedis or Lettuce)
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'redis.clients:jedis:3.6.1' // 或使用 Lettuce 作为 Redis 客户端
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
 	implementation 'commons-codec:commons-codec:1.15'
