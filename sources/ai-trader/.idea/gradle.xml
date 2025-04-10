@@ -4,6 +4,8 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/ai-tg" />
         <option name="gradleHome" value="/usr/local/Cellar/gradle/8.10.1/libexec" />
         <option name="gradleJvm" value="21" />

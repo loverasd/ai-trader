@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Service
+//@Service
 public class WebSocketSubscriptionService {
     private final WebSocketStreamClient wsClient;
     private final PriceAlertService priceAlertService;
@@ -24,7 +24,6 @@ public class WebSocketSubscriptionService {
     private static final Logger log = LoggerFactory.getLogger(WebSocketSubscriptionService.class);
     private final ObjectMapper objectMapper = new ObjectMapper(); // Jackson 对象映射器
 
-    @Autowired
     public WebSocketSubscriptionService(WebSocketStreamClient wsClient, PriceAlertService priceAlertService) {
         this.wsClient = wsClient;
         this.priceAlertService = priceAlertService;
@@ -32,7 +31,7 @@ public class WebSocketSubscriptionService {
 
     public void subscribeToTradingPairs(List<String> symbols) {
         // 每 100 个交易对使用一个连接，支持 400 个交易对分成 4 个连接
-        int batchSize = 100;
+        int batchSize = 10;
         for (int i = 0; i < symbols.size(); i += batchSize) {
             int end = Math.min(i + batchSize, symbols.size());
             List<String> batch = symbols.subList(i, end);

@@ -16,17 +16,17 @@ public class TelegramBotConfig {
         return new TelegramLongPollingBot() {
             @Override
             public String getBotUsername() {
-                return "Ai_Trader_SSS_Bot"; // Bot 的用户名
+                return "Ai_Trader_SSS_Bot";
             }
 
             @Override
             public String getBotToken() {
-                return System.getProperty("TELEGRAM_BOT_TOKEN"); // 从环境变量获取 Token
+                return System.getProperty("telegram.bot.token");
             }
 
             @Override
             public void onUpdateReceived(Update update) {
-                // 处理来自 Telegram 的消息
+                // 消息接收逻辑（可忽略）
             }
 
             public void sendMessageToChat(String chatId, String message) {

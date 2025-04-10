@@ -1,7 +1,7 @@
 plugins {
-	id 'java'
-	id 'org.springframework.boot' version '3.4.1'
-	id 'io.spring.dependency-management' version '1.1.7'
+    id 'java'
+    id 'org.springframework.boot' version '3.4.4'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.cp'
@@ -9,43 +9,52 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '21'
 
 java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
-	}
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
+    gradlePluginPortal()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://repo.spring.io/snapshot' }
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	// https://mvnrepository.com/artifact/org.telegram/telegrambots
-	implementation 'org.telegram:telegrambots:6.9.7.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.telegram:telegrambots:6.9.7.1'
 
-	implementation 'org.ta4j:ta4j-core:0.15'
-	// https://mvnrepository.com/artifact/io.github.binance/binance-connector-java
-	implementation 'io.github.binance:binance-connector-java:3.4.1'
+    implementation 'org.ta4j:ta4j-core:0.15'
+    implementation 'io.github.binance:binance-connector-java:3.4.1'
 
-	implementation 'io.github.cdimascio:dotenv-java:3.0.0'
+    implementation 'io.github.cdimascio:dotenv-java:3.0.0'
 
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	// Redis support (Jedis or Lettuce)
-	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-	implementation 'redis.clients:jedis:3.6.1' // 或使用 Lettuce 作为 Redis 客户端
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'com.squareup.okhttp3:okhttp:4.12.0'
-	implementation 'commons-codec:commons-codec:1.15'
-	implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
-	implementation 'com.fasterxml.jackson.core:jackson-core:2.15.0'
-	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.0'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'redis.clients:jedis:3.6.1' // 或使用 Lettuce 作为 Redis 客户端
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'commons-codec:commons-codec:1.15'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.0'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.15.0'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.0'
 
-	implementation 'com.google.guava:guava:33.4.0-jre'// 用于RateLimiter
-	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310' // 用于日期时间处理
+    implementation 'com.google.guava:guava:33.4.0-jre'// 用于RateLimiter
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310' // 用于日期时间处理
+    //数据库连接池
+    implementation 'com.zaxxer:HikariCP:6.2.1' // HikariCP 数据库连接池
+    implementation 'org.postgresql:postgresql:42.2.23' // PostgreSQL 驱动
+    // Spring AI
+    implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter:1.0.0-M6'
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.10.1'
+
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+    useJUnitPlatform()
 }

@@ -7,13 +7,12 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+//@Component
 public class WebSocketStartupListener {
     private final WebSocketSubscriptionService wsService;
     private final BinanceSymbolService symbolService;
     private final PriceAlertService priceAlertService;
 
-    @Autowired
     public WebSocketStartupListener(WebSocketSubscriptionService wsService,
                                     BinanceSymbolService symbolService,
                                     PriceAlertService priceAlertService) {

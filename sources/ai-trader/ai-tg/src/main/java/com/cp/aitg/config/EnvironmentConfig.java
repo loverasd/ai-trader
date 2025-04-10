@@ -1,6 +1,7 @@
 package com.cp.aitg.config;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import java.io.*;
 import java.nio.file.Files;
@@ -8,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.Properties;
 
 @Component
+@Slf4j
 public class EnvironmentConfig {
 
     private static final String CONFIG_FILE_PATH = "/Users/chenpan/.env/private.cfg";
@@ -29,6 +31,7 @@ public class EnvironmentConfig {
                 String value = properties.getProperty(key);
                 System.setProperty(key, value);
             }
+            log.info("okx.api.secret: {}",System.getProperty("okx.api.secret"));
             System.out.println("环境变量加载完成！");
         } catch (IOException e) {
             System.err.println("加载配置文件失败: " + e.getMessage());
